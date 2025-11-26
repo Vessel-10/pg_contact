@@ -1,9 +1,9 @@
  <?php
     $host = "localhost";
-    $port = "5432";
-    $dbname = "Contact-us";
+    $port = "Enter the port nummber";
+    $dbname = "Name of database";
     $username = "postgres";
-    $password = "123456789";
+    $password = "Password for the database";
     $appName = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $option = "--application_name=$appName";
 
