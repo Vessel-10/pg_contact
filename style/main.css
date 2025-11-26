@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 0;
+}
+.bx{
+    flex: 1;
+}
+.bx:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.bx:nth-child(1) h3{
+    text-transform: lowercase;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 10px;
+    line-height: 0.8;
+    letter-spacing: .5px;
+}
+.bx:nth-child(1) h3::first-letter{
+    text-transform: capitalize;
+}
+.bx:nth-child(1) p{
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #555;
+}
+.bx:nth-child(1) .bx_one{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bx:nth-child(1) .bx_one .bx_img{
+    display: flex;
+    gap: 5px;
+}
+.bx:nth-child(1) .bx_one .bx_img img{
+    height: 30px;
+}
+.bx:nth-child(1) .bx_one h3{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bx:nth-child(1) .bx-group{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.bx:nth-child(1) .bx-group .group-item{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.bx:nth-child(1) .bx-group .group-item img{
+    height: 30px;
+}
+
+.bx:nth-child(2) form{
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bx:nth-child(2) form .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.bx:nth-child(2) form .input-group label{
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #333;    
+}
+.bx:nth-child(2) form .input-group label::first-letter{
+    text-transform: capitalize;
+}
+.bx:nth-child(2) form .input-group input,
+.bx:nth-child(2) form textarea,
+.bx:nth-child(2) form button{
+    outline: none;
+    padding: 10px;
+}
+.bx:nth-child(2) form textarea{
+    height: 120px;
+}
+.bx:nth-child(2) form button{
+    background-color: teal;
+    color: #fff;
+    border: none;
+    text-transform: capitalize;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    cursor: pointer;
+}
+
+.success{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.795);
+}
+.modal{
+    background: #fff;
+    width: 450px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 30px;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+@media (max-width: 780px) {
+    section{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .bx:nth-child(1) .bx-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .bx:nth-child(2){
+        width: 100%;
+    }
+    .bx:nth-child(2) form{
+        padding: 10px;
+    }
+    .bx:nth-child(2) form textarea{
+        height: 150px;
+    }
+    .success{
+        display: none;
+        height: 100vh;
+    }
+    .modal{
+        margin: auto;
+        width: 350px;
+    }
+}
